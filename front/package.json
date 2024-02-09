@@ -11,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "open": "^10.0.3",
+    "resolve-url": "^0.2.1",
+    "source-map-resolve": "^0.6.0",
+    "source-map-url": "^0.4.1",
+    "urix": "^0.1.0",
+    "uuid": "^9.0.1"
   }
 }
