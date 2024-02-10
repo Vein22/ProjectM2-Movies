@@ -32,4 +32,3 @@ const tempData = [
   ];
 
   window.tempData = tempData;
-
