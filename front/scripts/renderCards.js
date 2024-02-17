@@ -1,3 +1,5 @@
+const {tempData} = require("./tempData")
+
 // Selecciona el contenedor
 const movieContainer = document.getElementById('movie-container');
 
@@ -47,6 +49,13 @@ const renderCards = (data) => {
     movieCards.forEach(card => movieContainer.appendChild(card));    
  }
 
- console.log("Todas las tarjetas cargaron correctamente, o quizas no...")
+ function failData(data, status, error) {
+  alert("Error al cargar datos, cargando datos de respaldo...");
+  movieContainer.innerHTML = '';
+  renderCards(tempData);
+}
 
- module.exports = renderCards;
+ module.exports = {
+  renderCards,
+  failData
+};

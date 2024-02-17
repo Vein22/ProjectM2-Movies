@@ -2,6 +2,10 @@ const CarritoCompra = require("../index");
 
 describe("Clase CarritoCompra", ()=>{
 
+    it("La clase CarritoCompra debe existir", ()=>{
+        expect(CarritoCompra).toBeInstanceOf(Function);
+    });
+
     it("Inicializa productos con un array vacío", ()=>{
         const carrito = new CarritoCompra();
         expect(carrito.productos).toEqual([]);

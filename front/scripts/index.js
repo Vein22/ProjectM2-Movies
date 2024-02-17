@@ -1,11 +1,7 @@
-let solicitud = $.get("https://students-api.2.us-1.fl0.io/movies").done((data) => {
-   renderCards(data);
-  });
-  
+const {renderCards, failData} = require("./renderCards")
 
-  solicitud.fail(function(jqXHR, textStatus, errorThrown) {
-    console.error(alert("Error al cargar datos", textStatus, errorThrown));
-  });
+let solicitud = $.get("https://students-api.2.us-1.fl0.io/movies")
+.done(renderCards)
+.fail(failData);
   
-  const renderCards = require("./renderCards")
  
