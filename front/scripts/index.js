@@ -4,7 +4,7 @@ const {renderCards, failData} = require("./renderCards")
 
     const solicitud = async() => {
         try {
-            const data = await axios.get("https://henry-movies-dev-sgtm.3.us-1.fl0.io")
+            const data = await axios.get("http://localhost:3000/movies")
             renderCards(data.data);
         } catch (error) {
             console.error(error)
