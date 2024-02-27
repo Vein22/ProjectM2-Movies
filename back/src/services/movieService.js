@@ -1,5 +1,11 @@
 class Movies {
-    constructor(title, year, director, duration, genre, rate, poster, description) {
+    constructor(id, title, year, director, duration, genre, rate, poster, description) {
+
+      if (!title || !poster || !director) {
+        throw new Error('Se deben proporcionar las propiedades: "title", "poster" y "director".');
+      }
+
+      this.id = id;
       this.title = title;
       this.year = year;
       this.director = director;
@@ -8,6 +14,7 @@ class Movies {
       this.rate = rate;
       this.poster = poster;
       this.description = description;
+
     }
   }
   
@@ -16,6 +23,7 @@ class Movies {
   
     const peliculas = peliculasData.map(peliculaData => {
       return new Movies(
+        peliculaData.id,
         peliculaData.title,
         peliculaData.year,
         peliculaData.director,
@@ -29,6 +37,8 @@ class Movies {
   
     return peliculas;
   }
+
+  
     
 
 
