@@ -14,6 +14,6 @@ const movieSchema = new mongoose.Schema({
     description: String,
 })
 
-const MovieModel = mongoose.model("MovieColl#1", movieSchema);
+const MovieModel = mongoose.model("moviecoll#1", movieSchema);
 
 module.exports = MovieModel;

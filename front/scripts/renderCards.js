@@ -3,7 +3,7 @@ const {tempData} = require("./tempData")
 // Selecciona el contenedor
 const movieContainer = document.getElementById('movie-container');
 
-const renderCards = (data) => {
+function renderCards(data) {
     
     // Mapea cada objeto en data a una tarjeta de película
     const movieCards = data.map(movie => {
